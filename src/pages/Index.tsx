@@ -13,12 +13,12 @@ const Index = () => {
     <div className="min-h-screen bg-genesis-black text-genesis-white">
       <Navigation />
       <Hero />
-      <About />
+      {/* {/* <About /> */}
       <Services />
       <Portfolio />
       <Blog />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };

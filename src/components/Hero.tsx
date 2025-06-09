@@ -1,18 +1,25 @@
+import { useState, useEffect } from "react";
 
-import { useState, useEffect } from 'react';
+const HERO_TEXTS = [
+  ["WE ARE", "STORYTELLERS."],
+  ["WE TURN IDEAS", "INTO NARRATIVES."],
+  ["WE TURN CAMPAIGNS", "INTO EXPERIENCES."],
+  ["WE TURN MOMENTS", "INTO MEMORIES."],
+];
 
 const Hero = () => {
+  const [currentText, setCurrentText] = useState(0);
+  const [fade, setFade] = useState(true);
   const [timeLeft, setTimeLeft] = useState({
     days: 2,
     hours: 22,
-    minutes: 26
+    minutes: 26,
   });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         let { days, hours, minutes } = prev;
-        
         if (minutes > 0) {
           minutes--;
         } else if (hours > 0) {
@@ -23,7 +30,7 @@ const Hero = () => {
           hours = 23;
           minutes = 59;
         }
-        
+
         return { days, hours, minutes };
       });
     }, 60000); // Update every minute
@@ -31,69 +38,56 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setCurrentText((prev) => (prev + 1) % HERO_TEXTS.length);
+        setFade(true);
+      }, 400); // fade out duration
+    }, 3200); // total duration per text
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute left-1/2 mt-[8vh] md:mt-0 top-0 md:top-[calc(50%+2.5vh)] -translate-x-1/2 md:-translate-y-1/2 z-0 w-[95vw] md:w-[calc(100%-6rem)]  md:mx-0 h-[45vh] md:h-[70vh] lg:h-[86vh] rounded-[2rem]">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-[2rem]"
         >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source
+            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            type="video/mp4"
+          />
         </video>
-        <div className="absolute inset-0 bg-black/50"></div>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-16">
-          WE ARE<br />
-          STORYTELLERS
-        </h1>
-        
-        {/* Progress Bar */}
-        <div className="flex items-center justify-center mb-16">
-          <div className="w-8 h-8 rounded-full bg-white"></div>
-          <div className="w-64 md:w-96 h-0.5 bg-white/30 mx-4 relative">
-            <div className="absolute left-0 top-0 h-full w-1/2 bg-white"></div>
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-orange-500"></div>
-          </div>
-          <div className="w-8 h-8 rounded-full border-2 border-white"></div>
-        </div>
-        
-        {/* Countdown */}
-        <div className="text-center">
-          <p className="text-sm text-genesis-lightGray mb-4 tracking-widest">
-            WE ARE SCRIPTING OUR STORY
-          </p>
-          <div className="flex justify-center space-x-8">
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold">
-                {String(timeLeft.days).padStart(2, '0')}
-              </div>
-              <div className="text-xs text-orange-500 tracking-widest mt-2">
-                Days
-              </div>
+        <div className="absolute inset-0 bg-black/50 rounded-[2rem]"></div>
+        {/* Content */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 w-full px-2 md:px-6 py-2 md:py-[1rem]">
+          <h1
+            className={`text-[3.2rem] overflow-x-clip md:text-6xl lg:text-[7rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {HERO_TEXTS[currentText][0]}
+            <br />
+            {HERO_TEXTS[currentText][1]}
+          </h1>
+          {/* Progress Bar */}
+          <div className="flex items-center justify-center w-full px-2 md:px-[4rem]">
+            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-white"></div>
+            <div className="w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] h-0.5 bg-white/30 mx-2 md:mx-4 relative">
+              <div className="absolute left-0 top-0 h-full w-1/2 bg-white"></div>
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-orange-500 animate-pulse"></div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold">
-                {String(timeLeft.hours).padStart(2, '0')}
-              </div>
-              <div className="text-xs text-orange-500 tracking-widest mt-2">
-                Hours
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold">
-                {String(timeLeft.minutes).padStart(2, '0')}
-              </div>
-              <div className="text-xs text-orange-500 tracking-widest mt-2">
-                Minutes
-              </div>
-            </div>
+            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-white"></div>
           </div>
         </div>
       </div>
