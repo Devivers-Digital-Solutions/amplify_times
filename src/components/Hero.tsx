@@ -1,5 +1,36 @@
 
+import { useState, useEffect } from 'react';
+
 const Hero = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 2,
+    hours: 22,
+    minutes: 26
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        let { days, hours, minutes } = prev;
+        
+        if (minutes > 0) {
+          minutes--;
+        } else if (hours > 0) {
+          hours--;
+          minutes = 59;
+        } else if (days > 0) {
+          days--;
+          hours = 23;
+          minutes = 59;
+        }
+        
+        return { days, hours, minutes };
+      });
+    }, 60000); // Update every minute
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -18,34 +49,52 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between w-full">
-          <div className="flex-1">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none">
-              A CREATIVE VIDEO<br />
-              PRODUCTION STUDIO
-            </h1>
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-16">
+          WE ARE<br />
+          STORYTELLERS
+        </h1>
+        
+        {/* Progress Bar */}
+        <div className="flex items-center justify-center mb-16">
+          <div className="w-8 h-8 rounded-full bg-white"></div>
+          <div className="w-64 md:w-96 h-0.5 bg-white/30 mx-4 relative">
+            <div className="absolute left-0 top-0 h-full w-1/2 bg-white"></div>
+            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-orange-500"></div>
           </div>
-          
-          {/* Navigation Arrows */}
-          <div className="flex flex-col space-y-4 ml-8">
-            <button className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+          <div className="w-8 h-8 rounded-full border-2 border-white"></div>
         </div>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        
+        {/* Countdown */}
+        <div className="text-center">
+          <p className="text-sm text-genesis-lightGray mb-4 tracking-widest">
+            WE ARE SCRIPTING OUR STORY
+          </p>
+          <div className="flex justify-center space-x-8">
+            <div className="text-center">
+              <div className="text-4xl md:text-6xl font-bold">
+                {String(timeLeft.days).padStart(2, '0')}
+              </div>
+              <div className="text-xs text-orange-500 tracking-widest mt-2">
+                Days
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-6xl font-bold">
+                {String(timeLeft.hours).padStart(2, '0')}
+              </div>
+              <div className="text-xs text-orange-500 tracking-widest mt-2">
+                Hours
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-6xl font-bold">
+                {String(timeLeft.minutes).padStart(2, '0')}
+              </div>
+              <div className="text-xs text-orange-500 tracking-widest mt-2">
+                Minutes
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

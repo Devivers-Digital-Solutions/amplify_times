@@ -15,10 +15,11 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Work', href: '#work' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Our Story', href: '#about' },
+    { name: 'Our Services', href: '#services' },
+    { name: 'Showreel', href: '#work' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Contact Us', href: '#contact' }
   ];
 
   return (
@@ -27,8 +28,11 @@ const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="text-2xl font-bold tracking-tight">
-            GENESIS
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mr-3">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
           </div>
           
           <div className="hidden md:flex space-x-8">
