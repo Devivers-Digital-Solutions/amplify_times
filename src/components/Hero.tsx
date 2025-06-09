@@ -72,7 +72,7 @@ const Hero = () => {
         {/* Content */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 w-full px-2 md:px-6 py-2 md:py-[1rem]">
           <h1
-            className={`text-[3.2rem] overflow-x-clip md:text-6xl lg:text-[7rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
+            className={`text-[3.1rem] overflow-x-clip md:text-6xl lg:text-[7rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
               fade ? "opacity-100" : "opacity-0"
             }`}
           >
