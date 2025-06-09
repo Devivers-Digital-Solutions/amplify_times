@@ -17,13 +17,29 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight mb-6 animate-fade-in">
-          GENESIS
-        </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl font-light tracking-widest animate-fade-in" style={{animationDelay: '0.3s'}}>
-          WE MAKE VIDEOS
-        </p>
+      <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between w-full">
+          <div className="flex-1">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none">
+              A CREATIVE VIDEO<br />
+              PRODUCTION STUDIO
+            </h1>
+          </div>
+          
+          {/* Navigation Arrows */}
+          <div className="flex flex-col space-y-4 ml-8">
+            <button className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
       
       {/* Scroll Indicator */}
