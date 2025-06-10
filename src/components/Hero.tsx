@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 const HERO_TEXTS = [
   ["WE ARE", "STORYTELLERS."],
-  ["WE TURN IDEAS", "INTO NARRATIVES."],
-  ["WE TURN CAMPAIGNS", "INTO EXPERIENCES."],
-  ["WE TURN MOMENTS", "INTO MEMORIES."],
+  ["WE TURN", "IDEAS INTO NARRATIVES."],
+  ["WE TURN", "CAMPAIGNS INTO EXPERIENCES."],
+  ["WE TURN", "MOMENTS INTO MEMORIES."],
 ];
 
 const Hero = () => {
@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-[55vh] md:h-[82vh] lg:h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Video */}
       <div className="absolute left-1/2 mt-[8vh] md:mt-0 top-0 md:top-[calc(50%+2.5vh)] -translate-x-1/2 md:-translate-y-1/2 z-0 w-[95vw] md:w-[calc(100%-6rem)]  md:mx-0 h-[45vh] md:h-[70vh] lg:h-[86vh] rounded-[2rem]">
@@ -72,7 +72,7 @@ const Hero = () => {
         {/* Content */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 w-full px-2 md:px-6 py-2 md:py-[1rem]">
           <h1
-            className={`text-[3.1rem] overflow-x-clip md:text-6xl lg:text-[7rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
+            className={`text-[3.1rem] overflow-x-clip md:text-6xl lg:text-[5rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
               fade ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -81,13 +81,12 @@ const Hero = () => {
             {HERO_TEXTS[currentText][1]}
           </h1>
           {/* Progress Bar */}
-          <div className="flex items-center justify-center w-full px-2 md:px-[4rem]">
+          <div className="flex items-center justify-center w-full px-2 md:px-[0.5rem]">
             <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-white"></div>
-            <div className="w-[calc(100%-3rem)] md:w-[calc(100%-4rem)] h-0.5 bg-white/30 mx-2 md:mx-4 relative">
-              <div className="absolute left-0 top-0 h-full w-1/2 bg-white"></div>
-              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-orange-500 animate-pulse"></div>
-            </div>
-            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full border-2 border-white"></div>
+            <div className="flex-1 h-0.5 bg-[#949494] mx-2 md:mx-3 animate-pulse"></div>
+            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#E21C1C] animate-pulse"></div>
+            <div className="flex-1 h-0.5 bg-[#949494] mx-2 md:mx-3 animate-pulse"></div>
+            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-white"></div>
           </div>
         </div>
       </div>

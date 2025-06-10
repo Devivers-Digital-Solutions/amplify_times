@@ -31,15 +31,15 @@ const Navigation = () => {
             <img src={logo} alt="Logo" className="h-[12vh] w-auto" />
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-[1rem] font-medium hover:text-genesis-lightGray transition-colors duration-200 relative group"
+                className="text-[0.9rem] font-medium hover:text-[#999] transition-colors duration-200 relative group"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+                {/* <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span> */}
               </a>
             ))}
           </div>
