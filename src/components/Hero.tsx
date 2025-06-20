@@ -77,7 +77,7 @@ const HeroSectionVideo = () => {
   }, []);
 
   return (
-    <section className="relative w-full flex items-end overflow-hidden md:rounded-[24px] md:mt-[65px] md:h-[42em] h-screen mx-10">
+    <section className="relative w-full flex items-end overflow-hidden md:rounded-[24px] md:mt-[65px] lg:h-[40em] h-screen">
       <video
         ref={videoRef}
         autoPlay

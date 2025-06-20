@@ -1,41 +1,58 @@
-import React from "react";
+import { useEffect, useState, useMemo } from "react";
 
-const CountDown = () => {
+const Countdown = () => {
+  const targetDate = new Date("2025-06-22T23:59:00");
+
+  const getTimeLeft = () => {
+    const total = targetDate - new Date();
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
+    return { total, days, hours, minutes };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft(getTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const timeUnits = useMemo(
+    () => [
+      { label: "Days", value: timeLeft.days },
+      { label: "Hours", value: timeLeft.hours },
+      { label: "Minutes", value: timeLeft.minutes },
+    ],
+    [timeLeft]
+  );
+
   return (
-    <section className="flex justify-center items-center w-full py-8 sm:py-12 md:py-16 lg:py-[5rem]">
-      <div className="text-center">
-        <p className="text-[#A6A6A6] text-xl sm:text-2xl md:text-3xl lg:text-[2.5rem] mb-6 md:mb-8">
-          WE ARE SCRIPTING OUR STORY
-        </p>
-        <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[2rem]">
-          <span className="flex flex-col justify-center items-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-bold">
-              02
-            </p>
-            <p className="text-sm sm:text-base lg:text-[1rem] text-[#EE6F20]">
-              Days
-            </p>
-          </span>
-          <span className="flex flex-col justify-center items-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-bold">
-              22
-            </p>
-            <p className="text-sm sm:text-base lg:text-[1rem] text-[#EE6F20]">
-              Hours
-            </p>
-          </span>
-          <span className="flex flex-col justify-center items-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-bold">
-              22
-            </p>
-            <p className="text-sm sm:text-base lg:text-[1rem] text-[#EE6F20]">
-              Minutes
-            </p>
-          </span>
-        </div>
+    <div className="pt-[113px] flex flex-col justify-center items-center pb-10">
+      <p className="text-[#A6A6A6] md:text-[40px] text-[32px] text-center font-normal mb-3 leading-normal">
+        WE ARE SCRIPTING OUR STORY
+      </p>
+      <div className="flex space-x-6 rounded-md">
+        {timeUnits.map((item, index) => (
+          <div key={index} className="text-center">
+            <div
+              className="text-white md:text-[56px] text-[50px] font-bold"
+              style={{ lineHeight: "normal" }}
+            >
+              {item.value.toString().padStart(2, "0")}
+            </div>
+            <div className="text-[#EE6F20] md:text-lg text-base uppercase">
+              {item.label}
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default CountDown;
+export default Countdown;

@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CountDown from "@/components/CountDown";
@@ -13,8 +12,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-genesis-black text-genesis-white">
       <Navigation />
-      <Hero />
-      <CountDown/>
+      <div className="mx-10">
+        <Hero />
+      </div>
+        <CountDown/>
       {/* <About /> */}
       {/* <Services /> */}
       {/* <Portfolio /> */}
