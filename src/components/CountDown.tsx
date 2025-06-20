@@ -33,6 +33,10 @@ const Countdown = () => {
 
   return (
     <div className="pt-[113px] flex flex-col justify-center items-center pb-10">
+    {/* // <div className="mt-[40vh] pt-[113px] flex flex-col justify-center items-center pb-10"> */}
+
+
+
       <p className="text-[#A6A6A6] md:text-[40px] text-[32px] text-center font-normal mb-3 leading-normal">
         WE ARE SCRIPTING OUR STORY
       </p>
