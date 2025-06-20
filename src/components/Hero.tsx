@@ -1,97 +1,129 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const HERO_TEXTS = [
-  ["WE ARE", "STORYTELLERS."],
-  ["WE TURN", "IDEAS INTO NARRATIVES."],
-  ["WE TURN", "CAMPAIGNS INTO EXPERIENCES."],
-  ["WE TURN", "MOMENTS INTO MEMORIES."],
+  "Storytellers",
+  "Creators",
+  "Thinkers",
+  "FlimMakers",
+  "Dreamers",
+  "Strategists",
+  "Visionaries",
 ];
 
-const Hero = () => {
-  const [currentText, setCurrentText] = useState(0);
-  const [fade, setFade] = useState(true);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 2,
-    hours: 22,
-    minutes: 26,
-  });
+const HeroSectionVideo = () => {
+  const videoRef = useRef(null);
+  const animatedRef = useRef(null);
+  const indexRef = useRef(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        let { days, hours, minutes } = prev;
-        if (minutes > 0) {
-          minutes--;
-        } else if (hours > 0) {
-          hours--;
-          minutes = 59;
-        } else if (days > 0) {
-          days--;
-          hours = 23;
-          minutes = 59;
-        }
+    const video = videoRef.current;
 
-        return { days, hours, minutes };
-      });
-    }, 60000); // Update every minute
+    const onLoadedMetadata = () => {
+      video.currentTime = 3;
+      video.play();
+    };
 
-    return () => clearInterval(timer);
+    const onTimeUpdate = () => {
+      if (video.currentTime >= 121.8) {
+        video.currentTime = 3;
+        video.play();
+      }
+    };
+
+    if (video) {
+      video.addEventListener("loadedmetadata", onLoadedMetadata);
+      video.addEventListener("timeupdate", onTimeUpdate);
+    }
+
+    return () => {
+      if (video) {
+        video.removeEventListener("loadedmetadata", onLoadedMetadata);
+        video.removeEventListener("timeupdate", onTimeUpdate);
+      }
+    };
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setCurrentText((prev) => (prev + 1) % HERO_TEXTS.length);
-        setFade(true);
-      }, 400); // fade out duration
-    }, 3200); // total duration per text
-    return () => clearInterval(interval);
+    const animated = animatedRef.current;
+    if (!animated) return;
+
+    const lineHeight = 80;
+    indexRef.current = 0;
+
+    // Clone first child to enable seamless looping
+    const firstClone = animated.children[0].cloneNode(true);
+    animated.appendChild(firstClone);
+
+    const total = animated.children.length;
+
+    intervalRef.current = setInterval(() => {
+      indexRef.current += 1;
+      animated.style.transition = "transform 0.7s ease-in-out";
+      animated.style.transform = `translateY(-${lineHeight * indexRef.current}px)`;
+
+      if (indexRef.current === total - 1) {
+        setTimeout(() => {
+          animated.style.transition = "none";
+          animated.style.transform = "translateY(0)";
+          indexRef.current = 0;
+        }, 700);
+      }
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
   }, []);
 
   return (
-    <section
-      id="home"
-      className="relative h-[55vh] md:h-[82vh] lg:h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* Background Video */}
-      <div className="absolute left-1/2 mt-[8vh] md:mt-0 top-0 md:top-[calc(50%+2.5vh)] -translate-x-1/2 md:-translate-y-1/2 z-0 w-[95vw] md:w-[calc(100%-6rem)]  md:mx-0 h-[45vh] md:h-[70vh] lg:h-[86vh] rounded-[2rem]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover rounded-[2rem]"
-        >
-          <source
-            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div className="absolute inset-0 bg-black/50 rounded-[2rem]"></div>
-        {/* Content */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 w-full px-2 md:px-6 py-2 md:py-[1rem]">
-          <h1
-            className={`text-[3.1rem] overflow-x-clip md:text-6xl lg:text-[5rem] font-black tracking-tight leading-none mb-[4rem] md:mb-[5rem] text-center transition-opacity duration-500 ${
-              fade ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {HERO_TEXTS[currentText][0]}
-            <br />
-            {HERO_TEXTS[currentText][1]}
-          </h1>
-          {/* Progress Bar */}
-          <div className="flex items-center justify-center w-full px-2 md:px-[0.5rem]">
-            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-white"></div>
-            <div className="flex-1 h-0.5 bg-[#949494] mx-2 md:mx-3 animate-pulse"></div>
-            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-[#E21C1C] animate-pulse"></div>
-            <div className="flex-1 h-0.5 bg-[#949494] mx-2 md:mx-3 animate-pulse"></div>
-            <div className="w-3 h-3 md:w-4 md:h-4 rounded-full bg-white"></div>
+    <section className="relative w-full flex items-end overflow-hidden md:rounded-[24px] md:mt-[65px] md:h-[42em] h-screen mx-10">
+      <video
+        ref={videoRef}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover 2xl:scale-[1.2] scale-[1.5]"
+      >
+        <source
+          src="https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/video.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="flex flex-col justify-end w-full p-6 relative z-10">
+        <div className="text-white font-bold md:text-5xl text-[40px] leading-none mb-8">
+          <div className="text-center uppercase">We are</div>
+          <div className="relative h-[80px] overflow-hidden">
+            <div
+              ref={animatedRef}
+              className="absolute top-0 left-0 w-full transition-transform duration-700 ease-in-out flex flex-col items-center uppercase"
+            >
+              {HERO_TEXTS.map((text, idx) => (
+                <div key={idx} className="h-[80px]">
+                  {text}
+                </div>
+              ))}
+            </div>
           </div>
+        </div>
+
+        {/* Slider navigation indicator */}
+        <div className="flex gap-4 items-center w-full">
+          <span className="w-[18px] h-[18px] rounded-full bg-white opacity-50 flex-shrink-0"></span>
+          <span className="w-full bg-[#949494] h-px"></span>
+          <span
+            className="w-[18px] h-[18px] rounded-full bg-[#E21C1C] flex-shrink-0"
+            id="redDot"
+          ></span>
+          <span className="w-full bg-[#949494] h-px"></span>
+          <span className="w-[18px] h-[18px] rounded-full bg-white opacity-50 flex-shrink-0"></span>
         </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroSectionVideo;

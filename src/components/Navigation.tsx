@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assests/logo.png";
+import logo from "../assests/amplify-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,12 +23,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md h-[8vh]">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-[72px]">
       <div className="lg:mx-[2rem] mr-[3.5rem] h-full">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className="h-[12vh] w-auto" />
+            <img src={logo} alt="Logo" className=" w-[128px]" />
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -36,10 +36,10 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-[0.9rem] font-medium hover:text-[#999] transition-colors duration-200 relative group"
+                
+                className="hover:text-[#EE6F20] text-white text-sm font-medium"
               >
                 {item.name}
-                {/* <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span> */}
               </a>
             ))}
           </div>
