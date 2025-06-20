@@ -1,92 +1,564 @@
+import aboutVdo from "../assests/about-vdo.gif";
+import AmplifyLogo from "../assests/Amplify-logo-2.png";
+import { CiMicrophoneOn } from "react-icons/ci";
+import { MdVideocam } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
+import team1 from "../assests/team1.png";
+import team2 from "../assests/team2.png";
+import team3 from "../assests/team3.png";
+import team4 from "../assests/team4.png";
+
+const teamMembers = [
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team1,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team2,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team3,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team4,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team1,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team2,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team3,
+  },
+  {
+    name: "Reena",
+    role: "Video Editor",
+    img: team4,
+  },
+];
+
+const verticals = [
+  "THE RESEARCH COMPANY",
+  "STOP IT FILMS",
+  "REPUBLIC OF CONTENT",
+  "LITVAM LITFEST OF INDIA",
+];
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-6 lg:px-8 bg-genesis-black">
-      <div className="max-w-7xl mx-auto">
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Left Image */}
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center"
-              alt="Creative team member working"
-              className="w-full h-96 object-cover rounded-lg"
-            />
+    <section className="w-full min-h-screen flex flex-col items-center pt-[9vh] bg-[#111]">
+      {/* Hero Section */}
+      <div className="relative w-[95vw] mx-auto rounded-[1.875rem] overflow-hidden shadow-lg">
+        <img
+          src={aboutVdo}
+          alt="About Hero"
+          className="w-full h-[180px] sm:h-[260px] md:h-[50vh] object-cover"
+        />
+        <div className="absolute left-0 right-0 bottom-0 flex flex-col items-center pb-4 pt-2">
+          <div
+            className="text-[2.5rem] mb-[0.5rem]"
+            style={{
+              color: "#FFF",
+              textAlign: "center",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "normal",
+            }}
+          >
+            ABOUT US
           </div>
-          
-          {/* Right Image */}
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop&crop=center"
-              alt="Video production setup"
-              className="w-full h-96 object-cover rounded-lg"
-            />
-          </div>
-        </div>
-
-        {/* Center Text */}
-        <div className="text-center mb-16">
-          <h2 className="text-6xl lg:text-8xl font-black tracking-tight mb-8 leading-none">
-            WE MAKE<br />
-            VIDEOS THAT<br />
-            TURN HEADS
-          </h2>
-          <p className="text-sm font-medium text-genesis-lightGray tracking-widest">
-            GENESIS STUDIO
-          </p>
-        </div>
-
-        {/* Description Text */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <p className="text-3xl lg:text-4xl font-light leading-relaxed">
-            We shoot and produce everything from films to videos, with a quality you can trust. We work with businesses and creatives to create the best content possible, working around the clock to deliver results in an efficient manner.
-          </p>
-          <p className="text-sm text-genesis-lightGray mt-8 tracking-wide">
-            CONSEQUAT EU VOLUTPAT RISUS NON. VELIT,<br />
-            TORTOR PLACERAT ARCU.
-          </p>
-        </div>
-
-        {/* Bottom Images */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Image */}
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&crop=center"
-              alt="Creative workspace"
-              className="w-full h-96 object-cover rounded-lg"
-            />
-          </div>
-          
-          {/* Right Image */}
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=400&fit=crop&crop=center"
-              alt="Video editing setup"
-              className="w-full h-96 object-cover rounded-lg"
-            />
+          <div
+            className="text-[5rem]"
+            style={{
+              color: "#FFF",
+              textAlign: "center",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "normal",
+            }}
+          >
+            SIMPLIFY WITH AMPLIFIY
           </div>
         </div>
       </div>
 
-      {/* Scrolling Text Marquee */}
-      <div className="mt-24 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">CREATIVE DIRECTION</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">BRANDING</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">DESIGN</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">MOTION</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">ANIMATED REELS</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">CREATIVE DIRECTION</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">BRANDING</span>
-          <span className="text-sm font-medium text-genesis-lightGray mx-8">•</span>
+      {/* Content Card */}
+      <div
+        className="mt-[5rem] w-[92vw] p-[2.5rem] mx-auto"
+        style={{
+          borderRadius: "1.875rem",
+          border: "2px solid #575757",
+          borderBottom: "4px solid #575757",
+        }}
+      >
+        {/* heading */}
+        <div
+          className="text-[3.125rem] mb-[1.5rem]"
+          style={{
+            color: "#BFBFBF",
+            fontFamily: "Red Hat Display",
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "normal",
+          }}
+        >
+          WE ARE A CREATIVE CONTENT <br /> POWERHOUSE
         </div>
+        {/* subtext */}
+        <div className="flex">
+          <div className="pr-[1rem] pt-[0.5rem] flex flex-col items-center">
+            <CiMicrophoneOn className="text-[1.5rem] mb-[0.5rem]" />
+            <div
+              className=" bg-[#D9D9D9]"
+              style={{
+                width: "0.0625rem",
+                height: "7.75rem",
+              }}
+            />
+            <MdVideocam className="text-[1.5rem] mt-[0.2rem]" />
+          </div>
+          <div>
+            <p
+              className="mb-[1.5rem]"
+              style={{
+                color: "#FFF",
+                fontFamily: "Red Hat Display",
+                fontSize: "2rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "2.8125rem",
+              }}
+            >
+              At Ampliify Times, we don’t just produce content, we craft
+              experiences. With over a decade of storytelling, media innovation,
+              and production excellence, we’ve become the go-to name for brands,
+              broadcasters, and creatives looking to make a real impact.
+            </p>
+            <p
+              style={{
+                color: "#FFF",
+                fontFamily: "Red Hat Display",
+                fontSize: "2rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "2.8125rem",
+              }}
+            >
+              From film production and ad commercials to brand campaigns, show
+              direction, and IP creation — we bring stories to life across every
+              format and platform. Whether it’s a TVC or a 360° brand launch, we
+              approach every project with one clear motto: Do it Bigger. Do it
+              Better. Do it Bolder.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* figures */}
+      <div className="mt-[2.5rem] w-[92vw] p-[2.5rem] mx-auto grid grid-cols-4">
+        <div className="flex flex-col ml-[2rem]">
+          <p
+            className="text-[5.5rem] mb-[0.5rem]"
+            style={{
+              color: "#EE6F20",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "normal",
+            }}
+          >
+            0854+
+          </p>
+          <div className="w-full flex relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="66"
+              height="66"
+              viewBox="0 0 66 66"
+              fill="none"
+            >
+              <path
+                d="M62.4434 12.7884H39.3644C39.2645 12.0889 39.0646 11.2897 38.665 10.6902L44.4598 5.19517C44.8594 4.7955 44.8594 4.19613 44.4598 3.79646C44.0601 3.39679 43.4607 3.39679 43.0611 3.79646L37.2662 9.29152C36.467 8.69201 35.4679 8.39239 34.3689 8.39239C33.3699 8.39239 32.4706 8.69214 31.6714 9.1916L22.8793 0.299752C22.4797 -0.0999173 21.8803 -0.0999173 21.4806 0.299752C21.081 0.699421 21.081 1.29879 21.4806 1.69846L30.2727 10.5904C29.873 11.2899 29.5733 11.9892 29.4734 12.7885H3.49684C1.59854 12.7884 0 14.387 0 16.2852V57.348C0 59.2463 1.59854 60.8449 3.49684 60.8449H11.5895V64.9412C11.5895 65.5407 11.9892 65.9403 12.5885 65.9403H22.8792C23.4787 65.9403 23.8783 65.5406 23.8783 64.9412V60.8449H42.0618V64.9412C42.0618 65.5407 42.4614 65.9403 43.0608 65.9403H53.3515C53.951 65.9403 54.3505 65.5406 54.3505 64.9412V60.8449H62.4432C64.3415 60.8449 65.94 59.2463 65.94 57.348V16.2852C65.9403 14.387 64.3417 12.7884 62.4434 12.7884ZM32.2708 11.1898C33.4697 9.99094 35.4679 10.0909 36.5668 11.2897C36.9665 11.6894 37.2663 12.2888 37.366 12.7884H31.4713C31.5714 12.189 31.8711 11.5895 32.2708 11.1898ZM21.8802 63.942H13.5877V60.8449H21.8802V63.942ZM52.3526 63.942H44.0601V60.8449H52.3526V63.942ZM63.9421 57.348C63.9421 58.1474 63.2426 58.8467 62.4434 58.8467C50.5542 58.8467 15.3861 58.8467 3.49684 58.8467C2.69764 58.8467 1.99821 58.1472 1.99821 57.348V16.2852C1.99821 15.486 2.69764 14.7866 3.49684 14.7866H62.4434C63.2426 14.7866 63.9421 15.486 63.9421 16.2852V57.348Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M60.2468 16.8848H5.69631C5.0968 16.8848 4.69727 17.2844 4.69727 17.8838V55.3499C4.69727 55.9494 5.09693 56.3489 5.69631 56.3489H60.2469C60.8464 56.3489 61.246 55.9492 61.246 55.3499V17.8838C61.246 17.3844 60.7464 16.8848 60.2468 16.8848ZM59.2478 54.3508H6.69535V18.883H59.2478V54.3508Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M35.0697 50.1545H55.5512C56.1507 50.1545 56.5502 49.7548 56.5502 49.1554V31.6712C56.5502 31.0717 56.1505 30.6722 55.5512 30.6722H51.0553V27.1754C51.0553 23.9783 48.4577 21.4805 45.3604 21.4805C42.1633 21.4805 39.6655 24.0781 39.6655 27.1754V30.6722H35.1696C34.5701 30.6722 34.1706 31.0719 34.1706 31.6712V49.1554C34.0707 49.655 34.5702 50.1545 35.0697 50.1545ZM41.464 27.1754H41.5639C41.5639 25.0772 43.2624 23.4787 45.2606 23.4787C47.2588 23.4787 48.9573 25.1771 48.9573 27.1754V30.6722H41.464V27.1754ZM36.0689 32.6704H39.5657V35.1681C39.5657 35.7676 39.9654 36.1671 40.5648 36.1671C41.1641 36.1671 41.5638 35.7674 41.5638 35.1681V32.6704H49.0571V35.1681C49.0571 35.7676 49.4567 36.1671 50.0561 36.1671C50.6555 36.1671 51.0551 35.7674 51.0551 35.1681V32.6704H54.552V48.1564H36.0689V32.6704Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M10.5895 42.4617H16.1845L27.774 49.5553C27.9738 49.6552 28.0737 49.6552 28.2736 49.6552C28.4734 49.6552 28.5733 49.6552 28.7731 49.5553C29.0729 49.3555 29.2727 49.0557 29.2727 48.6562V25.6769C29.2727 25.2773 29.0729 24.9775 28.7731 24.7778C28.4734 24.578 28.0737 24.578 27.7741 24.7778L16.4844 31.7715H10.6894C10.0899 31.7715 9.69039 32.1712 9.69039 32.7705V41.3627C9.59034 42.062 9.99001 42.4617 10.5895 42.4617ZM17.3834 33.4698L27.1745 27.3754V46.9576L17.3834 40.8632V33.4698ZM11.5886 33.8695H15.3851V40.4635H11.5886V33.8695Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+            </svg>
+            <p
+              className="absolute left-[2rem] top-[1.5rem]"
+              style={{
+                color: "#B0B0B0",
+                fontFamily: "Red Hat Display",
+                fontSize: "1.625rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "normal",
+              }}
+            >
+              TV Commercials
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col ml-[2rem]">
+          <p
+            className="text-[5.5rem] mb-[0.5rem]"
+            style={{
+              color: "#EE6F20",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "normal",
+            }}
+          >
+            394+
+          </p>
+          <div className="w-full flex relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="86"
+              height="86"
+              viewBox="0 0 86 86"
+              fill="none"
+            >
+              <path
+                d="M71.7639 39.3418L67.7707 39.3417C67.3564 39.3417 66.9591 39.5063 66.6661 39.7992C66.3732 40.0921 66.2086 40.4894 66.2086 40.9037C66.2085 41.318 66.3731 41.7153 66.666 42.0082C66.9589 42.3012 67.3562 42.4658 67.7705 42.4658L71.7637 42.4659C72.178 42.4658 72.5753 42.3013 72.8682 42.0083C73.1611 41.7154 73.3257 41.3181 73.3257 40.9039C73.3257 40.4896 73.1612 40.0923 72.8683 39.7994C72.5753 39.5065 72.1782 39.3418 71.7639 39.3418Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M70.6569 27.8194L66.6634 31.8129C66.3705 32.1059 66.2059 32.5032 66.2059 32.9175C66.2059 33.3318 66.3704 33.7291 66.6634 34.0221C66.9563 34.315 67.3537 34.4796 67.768 34.4796C68.1822 34.4796 68.5796 34.315 68.8725 34.022L72.866 30.0286C73.159 29.7356 73.3235 29.3383 73.3235 28.924C73.3236 28.5097 73.159 28.1124 72.866 27.8194C72.5731 27.5265 72.1758 27.3619 71.7615 27.3619C71.3472 27.3619 70.9498 27.5265 70.6569 27.8194Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M68.8758 47.7872C68.5829 47.4942 68.1855 47.3297 67.7712 47.3297C67.3569 47.3297 66.9596 47.4943 66.6666 47.7872C66.3737 48.0802 66.2091 48.4775 66.2091 48.8918C66.2091 49.3061 66.3737 49.7034 66.6666 49.9964L70.6599 53.9897C70.9529 54.2826 71.3502 54.4472 71.7645 54.4472C72.1788 54.4472 72.5761 54.2826 72.8691 53.9897C73.162 53.6967 73.3266 53.2994 73.3266 52.8851C73.3266 52.4708 73.1621 52.0735 72.8691 51.7805L68.8758 47.7872Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M61.3435 58.0529L61.3434 23.7657C61.3451 21.4202 59.301 19.3761 56.9515 19.3738C56.3769 19.3737 55.8079 19.4873 55.2773 19.708C54.7467 19.9286 54.2651 20.2521 53.86 20.6597C47.4701 27.0377 37.4861 30.8463 27.1511 30.8474L19.5048 30.846L16.9551 30.8465C15.1892 30.8486 13.4961 31.551 12.2473 32.7998C10.9986 34.0486 10.2961 35.7416 10.294 37.5076L10.295 43.7911C10.2949 44.6657 10.4671 45.5319 10.8017 46.34C11.1364 47.1481 11.627 47.8824 12.2454 48.5009C12.8639 49.1194 13.5982 49.6099 14.4063 49.9446C15.2144 50.2793 16.0806 50.4514 16.9552 50.4513L18.4308 50.4516L19.6821 63.3936C19.7787 64.4138 20.2536 65.3609 21.0132 66.0486C21.7729 66.7364 22.7623 67.115 23.7871 67.1101L25.8776 67.1102C26.6294 67.1093 27.3502 66.8102 27.8818 66.2785C28.4134 65.7469 28.7125 65.0262 28.7135 64.2743L28.713 58.1609C30.6331 58.1094 32.4885 57.4557 34.0169 56.2922C35.5453 55.1288 36.6695 53.5145 37.2305 51.6774C43.5252 53.2606 49.2693 56.5295 53.8453 61.1327C54.6708 61.9557 55.7862 62.4221 56.9519 62.4314C58.1145 62.4318 59.2297 61.971 60.053 61.1502C60.8763 60.3293 61.3404 59.2155 61.3435 58.0529ZM16.9547 47.3268C16.0235 47.3054 15.1364 46.926 14.4778 46.2674C13.8192 45.6087 13.4397 44.7216 13.4183 43.7904L13.4176 37.5073C13.4186 36.5695 13.7916 35.6704 14.4547 35.0072C15.1179 34.3441 16.017 33.9711 16.9548 33.9701L17.9422 33.9695L17.942 35.8051L17.9404 47.3265L16.9547 47.3268ZM25.5884 63.9862L23.786 63.9851C23.5386 63.9868 23.2995 63.8961 23.1155 63.7308C22.9314 63.5656 22.8157 63.3375 22.7909 63.0914L21.5679 50.4514L25.5894 50.4515L25.5884 63.9862ZM28.7133 50.4879C31.1755 50.5352 31.9484 50.6471 34.1546 51.0306C33.7508 52.1669 33.0174 53.157 32.048 53.8744C31.0787 54.5917 29.9175 55.0038 28.7128 55.0578L28.7133 50.4879ZM56.068 58.937C47.1851 50.0541 37.5505 47.6768 27.1508 47.3268L21.0653 47.3269L21.0655 33.97L27.1506 33.9709C38.4608 33.9697 49.001 29.9233 56.0817 22.8555C56.26 22.6836 56.485 22.5681 56.7286 22.5232C56.9722 22.4783 57.2236 22.5061 57.4515 22.6031C57.6794 22.7001 57.8737 22.8621 58.0101 23.0687C58.1466 23.2754 58.2193 23.5177 58.219 23.7654L58.2191 58.0524C58.219 59.2178 56.7761 59.7029 56.068 58.937Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M32.1351 38.0429C32.1344 37.8377 32.0933 37.6346 32.0141 37.4454C31.9349 37.2561 31.8191 37.0843 31.6734 36.9398C31.5278 36.7954 31.355 36.681 31.1651 36.6034C30.9751 36.5258 30.7718 36.4864 30.5666 36.4875L26.8517 36.5035C26.6462 36.5038 26.4428 36.5446 26.2531 36.6236C26.0634 36.7026 25.8912 36.8183 25.7462 36.964C25.6013 37.1097 25.4866 37.2825 25.4086 37.4726C25.3306 37.6628 25.2909 37.8664 25.2918 38.0719C25.2926 38.2774 25.334 38.4807 25.4135 38.6702C25.4931 38.8596 25.6093 39.0315 25.7554 39.176C25.9015 39.3205 26.0747 39.4347 26.265 39.5122C26.4554 39.5896 26.6591 39.6287 26.8646 39.6273L30.5795 39.6113C30.7846 39.6104 30.9876 39.5692 31.1767 39.4899C31.3659 39.4106 31.5377 39.2949 31.6821 39.1492C31.8266 39.0036 31.9409 38.8309 32.0186 38.6411C32.0963 38.4513 32.1359 38.248 32.1351 38.0429Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M30.5831 41.6103L26.8683 41.6263C26.4609 41.6382 26.0744 41.8089 25.7911 42.1018C25.5078 42.3947 25.3502 42.7868 25.3518 43.1943C25.3535 43.6018 25.5144 43.9925 25.8001 44.283C26.0858 44.5736 26.4738 44.741 26.8812 44.7495L30.596 44.7335C30.8011 44.7326 31.0041 44.6914 31.1933 44.6121C31.3824 44.5328 31.5542 44.417 31.6986 44.2714C31.843 44.1257 31.9574 43.953 32.0351 43.7632C32.1128 43.5734 32.1523 43.3701 32.1515 43.165C32.1506 42.9599 32.1094 42.7569 32.0301 42.5677C31.9508 42.3786 31.835 42.2069 31.6894 42.0624C31.5437 41.918 31.371 41.8037 31.1812 41.726C30.9914 41.6483 30.7881 41.6087 30.583 41.6096L30.5831 41.6103Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+            </svg>
+            <p
+              className="absolute left-[2rem] top-[1.5rem]"
+              style={{
+                color: "#B0B0B0",
+                fontFamily: "Red Hat Display",
+                fontSize: "1.625rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "normal",
+              }}
+            >
+              Media & Brand campaigns
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col ml-[2rem]">
+          <p
+            className="text-[5.5rem] mb-[0.5rem]"
+            style={{
+              color: "#EE6F20",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "normal",
+            }}
+          >
+            085+
+          </p>
+          <div className="w-full flex relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="71"
+              height="71"
+              viewBox="0 0 71 71"
+              fill="none"
+            >
+              <path
+                d="M61.0156 63.2344C62.1925 63.2344 63.3212 62.7669 64.1534 61.9347C64.9856 61.1025 65.4531 59.9738 65.4531 58.7969V23.2969C65.4531 22.12 64.9856 20.9913 64.1534 20.1591C63.3212 19.3269 62.1925 18.8594 61.0156 18.8594H37.7188L48.6017 3.98269C48.6987 3.86631 48.7708 3.73129 48.8137 3.58596C48.8565 3.44064 48.8691 3.28808 48.8507 3.1377C48.8323 2.98732 48.7832 2.84231 48.7066 2.71159C48.6301 2.58088 48.5275 2.46724 48.4053 2.37768C48.2831 2.28812 48.1439 2.22454 47.9961 2.19085C47.8484 2.15717 47.6954 2.1541 47.5465 2.18183C47.3975 2.20955 47.2558 2.2675 47.1301 2.35208C47.0044 2.43666 46.8974 2.5461 46.8156 2.67363L35.5 18.0939L24.1955 2.67363C24.1137 2.5461 24.0067 2.43666 23.881 2.35208C23.7553 2.2675 23.6136 2.20955 23.4646 2.18183C23.3157 2.1541 23.1627 2.15717 23.0149 2.19085C22.8672 2.22454 22.728 2.28812 22.6058 2.37768C22.4836 2.46724 22.381 2.58088 22.3044 2.71159C22.2279 2.84231 22.1788 2.98732 22.1604 3.1377C22.142 3.28808 22.1546 3.44064 22.1974 3.58596C22.2403 3.73129 22.3124 3.86631 22.4094 3.98269L33.2812 18.8594H9.98438C8.80748 18.8594 7.67878 19.3269 6.84659 20.1591C6.0144 20.9913 5.54688 22.12 5.54688 23.2969V58.7969C5.54688 59.9738 6.0144 61.1025 6.84659 61.9347C7.67878 62.7669 8.80748 63.2344 9.98438 63.2344H18.3602L17.2508 64.4214C17.052 64.3674 16.8466 64.3412 16.6406 64.3438C16.2018 64.3438 15.7728 64.4739 15.408 64.7177C15.0431 64.9615 14.7587 65.308 14.5908 65.7135C14.4228 66.1189 14.3789 66.565 14.4645 66.9954C14.5501 67.4258 14.7614 67.8211 15.0717 68.1314C15.382 68.4417 15.7774 68.6531 16.2078 68.7387C16.6382 68.8243 17.0843 68.7803 17.4897 68.6124C17.8951 68.4445 18.2416 68.1601 18.4854 67.7952C18.7292 67.4303 18.8594 67.0014 18.8594 66.5625C18.8553 66.3672 18.8255 66.1732 18.7706 65.9857L21.4553 63.2344H49.5447L52.2294 65.9857C52.1745 66.1732 52.1447 66.3672 52.1406 66.5625C52.1406 67.0014 52.2708 67.4303 52.5145 67.7952C52.7584 68.1601 53.1049 68.4445 53.5103 68.6124C53.9157 68.7803 54.3618 68.8243 54.7922 68.7387C55.2226 68.6531 55.618 68.4417 55.9283 68.1314C56.2386 67.8211 56.4499 67.4258 56.5355 66.9954C56.6211 66.565 56.5772 66.1189 56.4092 65.7135C56.2413 65.308 55.9569 64.9615 55.592 64.7177C55.2272 64.4739 54.7982 64.3438 54.3594 64.3438C54.1682 64.3452 53.9781 64.3713 53.7936 64.4214L52.6842 63.2344H61.0156ZM7.76562 58.7969V23.2969C7.76562 22.7085 7.99939 22.1441 8.41548 21.728C8.83158 21.3119 9.39593 21.0782 9.98438 21.0782H61.0156C61.6041 21.0782 62.1684 21.3119 62.5845 21.728C63.0006 22.1441 63.2344 22.7085 63.2344 23.2969V58.7969C63.2344 59.3854 63.0006 59.9497 62.5845 60.3658C62.1684 60.7819 61.6041 61.0157 61.0156 61.0157H9.98438C9.39593 61.0157 8.83158 60.7819 8.41548 60.3658C7.99939 59.9497 7.76562 59.3854 7.76562 58.7969Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M37.7188 23.2969H17.75C15.6904 23.2969 13.7152 24.115 12.2589 25.5714C10.8025 27.0277 9.98438 29.0029 9.98438 31.0625V51.0312C9.98438 53.0908 10.8025 55.066 12.2589 56.5224C13.7152 57.9787 15.6904 58.7969 17.75 58.7969H37.7188C39.7783 58.7969 41.7535 57.9787 43.2099 56.5224C44.6662 55.066 45.4844 53.0908 45.4844 51.0312V31.0625C45.4844 29.0029 44.6662 27.0277 43.2099 25.5714C41.7535 24.115 39.7783 23.2969 37.7188 23.2969ZM43.2656 51.0312C43.2656 52.5024 42.6812 53.9132 41.641 54.9535C40.6007 55.9937 39.1899 56.5781 37.7188 56.5781H17.75C16.2789 56.5781 14.868 55.9937 13.8278 54.9535C12.7875 53.9132 12.2031 52.5024 12.2031 51.0312V31.0625C12.2031 29.5914 12.7875 28.1805 13.8278 27.1403C14.868 26.1 16.2789 25.5156 17.75 25.5156H37.7188C39.1899 25.5156 40.6007 26.1 41.641 27.1403C42.6812 28.1805 43.2656 29.5914 43.2656 31.0625V51.0312Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M54.3594 27.7344C53.2623 27.7344 52.1899 28.0597 51.2777 28.6692C50.3655 29.2787 49.6546 30.145 49.2347 31.1586C48.8149 32.1721 48.7051 33.2874 48.9191 34.3634C49.1331 35.4394 49.6614 36.4277 50.4371 37.2035C51.2129 37.9792 52.2012 38.5075 53.2772 38.7215C54.3532 38.9356 55.4685 38.8257 56.4821 38.4059C57.4956 37.9861 58.3619 37.2751 58.9714 36.3629C59.5809 35.4507 59.9063 34.3783 59.9063 33.2812C59.9063 31.8101 59.3219 30.3993 58.2816 29.359C57.2414 28.3188 55.8305 27.7344 54.3594 27.7344ZM54.3594 36.6094C53.7011 36.6094 53.0577 36.4142 52.5104 36.0485C51.9631 35.6828 51.5365 35.163 51.2846 34.5549C51.0327 33.9467 50.9668 33.2776 51.0952 32.632C51.2236 31.9864 51.5406 31.3934 52.006 30.9279C52.4715 30.4625 53.0645 30.1455 53.7101 30.0171C54.3557 29.8887 55.0249 29.9546 55.633 30.2065C56.2411 30.4584 56.7609 30.8849 57.1266 31.4322C57.4923 31.9796 57.6875 32.623 57.6875 33.2812C57.6875 34.1639 57.3369 35.0104 56.7127 35.6346C56.0886 36.2587 55.2421 36.6094 54.3594 36.6094Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M54.3594 34.3906C54.9721 34.3906 55.4688 33.8939 55.4688 33.2812C55.4688 32.6686 54.9721 32.1719 54.3594 32.1719C53.7467 32.1719 53.25 32.6686 53.25 33.2812C53.25 33.8939 53.7467 34.3906 54.3594 34.3906Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M49.9219 44.375C50.5346 44.375 51.0312 43.8783 51.0312 43.2656C51.0312 42.6529 50.5346 42.1562 49.9219 42.1562C49.3092 42.1562 48.8125 42.6529 48.8125 43.2656C48.8125 43.8783 49.3092 44.375 49.9219 44.375Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M54.3594 44.375C54.9721 44.375 55.4688 43.8783 55.4688 43.2656C55.4688 42.6529 54.9721 42.1562 54.3594 42.1562C53.7467 42.1562 53.25 42.6529 53.25 43.2656C53.25 43.8783 53.7467 44.375 54.3594 44.375Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M58.7969 44.375C59.4096 44.375 59.9062 43.8783 59.9062 43.2656C59.9062 42.6529 59.4096 42.1562 58.7969 42.1562C58.1842 42.1562 57.6875 42.6529 57.6875 43.2656C57.6875 43.8783 58.1842 44.375 58.7969 44.375Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M49.9219 47.7031C50.5346 47.7031 51.0312 47.2064 51.0312 46.5938C51.0312 45.9811 50.5346 45.4844 49.9219 45.4844C49.3092 45.4844 48.8125 45.9811 48.8125 46.5938C48.8125 47.2064 49.3092 47.7031 49.9219 47.7031Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M54.3594 47.7031C54.9721 47.7031 55.4688 47.2064 55.4688 46.5938C55.4688 45.9811 54.9721 45.4844 54.3594 45.4844C53.7467 45.4844 53.25 45.9811 53.25 46.5938C53.25 47.2064 53.7467 47.7031 54.3594 47.7031Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+              <path
+                d="M58.7969 47.7031C59.4096 47.7031 59.9062 47.2064 59.9062 46.5938C59.9062 45.9811 59.4096 45.4844 58.7969 45.4844C58.1842 45.4844 57.6875 45.9811 57.6875 46.5938C57.6875 47.2064 58.1842 47.7031 58.7969 47.7031Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+            </svg>
+            <p
+              className="absolute left-[2rem] top-[1.5rem]"
+              style={{
+                color: "#B0B0B0",
+                fontFamily: "Red Hat Display",
+                fontSize: "1.625rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "normal",
+              }}
+            >
+              Television & Festival IPs
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col ml-[2rem]">
+          <p
+            className="text-[5.5rem] mb-[0.5rem]"
+            style={{
+              color: "#EE6F20",
+              fontFamily: "Red Hat Display",
+              fontStyle: "normal",
+              fontWeight: 700,
+              lineHeight: "normal",
+            }}
+          >
+            094+
+          </p>
+          <div className="w-full flex relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="83"
+              viewBox="0 0 36 83"
+              fill="none"
+            >
+              <path
+                d="M20.4575 39.2901C22.4865 39.4779 24.3754 39.4723 26.1831 39.854C31.4379 40.9634 35.2265 45.7072 35.1488 50.9416C35.0947 54.5852 33.3151 57.3376 30.4343 59.3976C29.28 60.2229 27.9919 60.8736 26.7198 61.5147C26.1781 61.7877 26.0064 62.0193 26.1598 62.628C26.8435 65.3425 27.4663 68.0725 28.1307 70.792C29.3861 75.929 27.2787 79.8221 22.2441 81.4081C18.2185 82.6764 14.3055 82.4577 10.743 79.9625C9.1594 78.8533 8.0185 77.3819 7.91111 75.3445C7.78968 73.0409 8.90227 71.3731 10.8196 70.2627C12.8393 69.0931 14.9079 69.1332 16.9115 70.3817C18.0053 71.0634 18.7636 72.0153 19.0887 73.2752C19.4983 74.8626 18.8564 76.453 17.4296 77.4473C16.3773 78.1807 15.2566 78.4938 13.373 78.5615C13.5205 79.3601 14.1229 79.7024 14.748 79.9451C17.9489 81.1879 20.9627 80.612 23.7753 78.8293C25.3138 77.854 26.2658 76.3624 26.4001 74.5443C26.4998 73.195 26.4357 71.7892 26.1643 70.4664C25.6738 68.0768 24.94 65.7383 24.3809 63.3613C24.208 62.6264 23.9006 62.5555 23.2447 62.6801C17.6034 63.7524 12.2643 62.9835 7.49516 59.6697C2.45192 56.1654 -0.234287 51.3304 0.016051 45.0851C0.136349 42.0805 1.42089 39.4605 3.11685 37.038C5.28199 33.9456 8.01691 31.3912 10.8594 28.9451C12.1109 27.8681 13.3678 26.7961 14.6508 25.7574C15.0601 25.4259 15.1209 25.1142 14.9799 24.6282C13.9469 21.0687 13.2543 17.4377 13.5672 13.7266C13.9367 9.34286 15.1983 5.23981 18.3349 1.97023C19.0187 1.2575 19.972 0.794204 20.8272 0.258185C21.6102 -0.23275 22.3376 0.0212146 22.8992 0.643322C23.4856 1.29262 24.0562 1.97838 24.5041 2.72623C26.2887 5.70582 27.5025 8.91831 27.8886 12.3737C28.351 16.5121 27.1761 20.3161 25.1711 23.8976C23.6061 26.6935 21.5044 29.0396 19.1249 31.1599C18.8979 31.3622 18.6392 31.7684 18.6945 32.0117C19.2595 34.4984 19.8866 36.9712 20.4575 39.2901ZM23.8209 61.0521C22.5084 55.6156 21.2568 50.4307 20.0066 45.2529C18.037 45.6306 15.9747 47.0803 14.9503 48.7404C13.3862 51.2751 13.864 53.8029 16.2917 55.5263C16.9568 55.9984 17.7439 56.295 18.448 56.7173C18.6689 56.8496 18.8012 57.1294 18.9743 57.3419C18.6967 57.4572 18.4253 57.5947 18.1383 57.677C18.0252 57.7094 17.8743 57.6251 17.7448 57.5814C15.8338 56.9384 14.1616 55.926 12.8275 54.3922C10.3778 51.5764 10.0966 48.0048 12.1333 44.8757C13.5069 42.7656 15.407 41.2652 17.7309 40.3012C18.0504 40.1687 18.3666 40.0289 18.7139 39.8796C18.1408 37.5126 17.5823 35.2061 16.9899 32.7596C15.4006 33.9943 13.9009 35.1055 12.4612 36.2897C9.70584 38.5559 7.17935 41.0343 5.52508 44.2631C2.63498 49.9038 4.16578 55.5755 9.5305 58.9293C12.6279 60.8654 16.0658 61.5992 19.682 61.4826C21.0397 61.4391 22.3909 61.2066 23.8209 61.0521ZM16.7869 23.9604C16.9521 23.8614 17.0724 23.8034 17.177 23.7245C19.8365 21.7195 22.1704 19.4137 23.844 16.4971C24.9855 14.5075 25.7182 12.4085 25.6183 10.0737C25.5227 7.84174 23.5048 6.51664 21.4319 7.33245C19.8737 7.94573 18.7656 9.07168 17.9613 10.4908C15.5436 14.7554 15.2412 19.227 16.7869 23.9604ZM25.6271 60.4203C29.7558 58.7334 32.0675 54.6981 31.0247 51.0825C29.7621 46.7049 25.1484 44.8044 21.8759 45.1093C23.1249 50.2071 24.3698 55.2887 25.6271 60.4203Z"
+                fill="#D9D9D9"
+                fill-opacity="0.19"
+              />
+            </svg>
+            <p
+              className="absolute left-[2rem] top-[1.5rem]"
+              style={{
+                color: "#B0B0B0",
+                fontFamily: "Red Hat Display",
+                fontSize: "1.625rem",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "normal",
+              }}
+            >
+              Music videos
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Our Team */}
+      <div className="w-[95vw] mx-auto mt-[5rem]">
+        {/* ourteam-text */}
+        <div
+          className="mb-[5rem] text-[3.125rem] flex flex-col justify-center items-center"
+          style={{
+            color: "#BFBFBF",
+            fontFamily: "Red Hat Display",
+            fontStyle: "normal",
+            fontWeight: 400,
+            lineHeight: "normal",
+          }}
+        >
+          OUR TEAM
+          <div
+            className=""
+            style={{
+              width: "8.125rem",
+              height: "0.125rem",
+              flexShrink: 0,
+              borderRadius: "6.25rem",
+              background:
+                "linear-gradient(90deg, rgba(217, 217, 217, 0.00) 0%, #737373 47.6%, rgba(115, 115, 115, 0.00) 100%)",
+            }}
+          />
+        </div>
+        {/* ourteam-cards */}
+        <div className="grid grid-cols-4 gap-x-[2rem] gap-y-[3rem] justify-items-center">
+          {teamMembers.map((member, idx) => (
+            <div
+              key={idx}
+              className="bg-[#181818] rounded-xl flex flex-col items-start justify-end shadow-md w-full h-[45vh]"
+              style={{
+                background: `url(${member.img}) no-repeat center center / cover`,
+                backgroundBlendMode: "multiply",
+                backgroundColor: "rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <div
+                className="text-[2.125rem] ml-[1rem]"
+                style={{
+                  color: "#EE6F20",
+                  fontFamily: "Red Hat Display",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "normal",
+                }}
+              >
+                {member.name}
+              </div>
+              <div
+                className="text-[1.4375rem] ml-[1rem] mb-[0.5rem]"
+                style={{
+                  color: "#8E98A8",
+                  fontFamily: "Red Hat Display",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "normal",
+                }}
+              >
+                {member.role}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Other Verticles */}
+      <div className="w-[95vw] mx-auto mt-[5rem]">
+        <div
+          className="text-[3.125rem] flex justify-center items-center mb-[3rem]"
+          style={{
+            color: "#BFBFBF",
+            fontFamily: "Red Hat Display",
+            fontStyle: "normal",
+            fontWeight: 400,
+            lineHeight: "normal",
+          }}
+        >
+          OTHER VERTICLES
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {verticals.map((v, idx) => (
+            <div
+              key={idx}
+              className="bg-[#232323] rounded-lg p-[2rem] flex justify-center items-center"
+              style={{
+                color: "#FFF",
+                fontFamily: "Red Hat Display",
+                fontSize: "1.9375rem",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "3.75rem",
+              }}
+            >
+              {v}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="w-[95vw] mx-auto mt-[5rem] flex flex-col items-center mb-[5rem]">
+        <div
+          className="text-[5rem]"
+          style={{
+            color: "#FFF",
+            fontFamily: "Red Hat Display",
+            fontStyle: "normal",
+            fontWeight: 400,
+            lineHeight: "normal",
+            letterSpacing: "0.2rem",
+          }}
+        >
+          LET'S WORK TOGETHER
+        </div>
+        <CiMicrophoneOn className="text-[4rem] my-[1.5rem]" />
+        <button
+          className="px-[2rem] py-[1rem] flex justify-center items-center"
+          style={{
+            color: "#FFF",
+            fontFamily: "Helvetica",
+            fontSize: "1.25rem",
+            fontStyle: "normal", 
+            fontWeight: 400,
+            lineHeight: "normal",
+            borderRadius: "3.3125rem",
+            border: "2px solid #EBEBEB",
+            boxShadow: "0px 2px 4px 0px rgba(255, 255, 255, 0.25)"
+          }}
+        >
+          Contact Us
+          <MdArrowOutward className="text-[1.5rem] ml-[0.8rem]" />
+        </button>
       </div>
     </section>
   );
