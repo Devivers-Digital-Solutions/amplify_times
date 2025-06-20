@@ -77,7 +77,10 @@ const HeroSectionVideo = () => {
   }, []);
 
   return (
-    <section className="relative w-full flex items-end overflow-hidden mt-[80px] md:mt-[65px] md:rounded-[24px] h-[70vh] md:h-[80vh] lg:h-[85vh]">
+    // <section className="relative w-full flex items-end overflow-hidden mt-[80px] md:mt-[65px] md:rounded-[24px] h-[70vh] md:h-[80vh] lg:h-[85vh]">
+    // <section className="relative w-full flex items-end overflow-hidden mt-[80px] md:mt-[65px] md:rounded-[24px] h-[70vh] md:h-[100vh] lg:h-[100vh]">
+    <section className="relative w-full flex items-end overflow-hidden mt-[80px] md:mt-[65px] md:rounded-[24px] h-[70vh] md:h-[75vh] lg:h-[70vh]">
+
 
     <video
         ref={videoRef}
