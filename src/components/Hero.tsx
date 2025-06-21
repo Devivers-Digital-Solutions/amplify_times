@@ -138,44 +138,129 @@ const sportsEvents = [
 ];
 
 const BRAND_ICONS = [
-  { src: action, alt: "action" },
-  { src: amar, alt: "amar" },
-  { src: bbc, alt: "bbc" },
-  { src: boardofcricket, alt: "board of cricket" },
-  { src: bp, alt: "bp" },
-  { src: colors, alt: "colors" },
-  { src: culture, alt: "culture" },
-  { src: dainik, alt: "dainik" },
-  { src: dainikjagran, alt: "dainik jagran" },
-  { src: foodpanda, alt: "foodpanda" },
-  { src: glen, alt: "glen" },
-  { src: gujarat, alt: "gujarat" },
-  { src: hotstar, alt: "hotstar" },
-  { src: ib, alt: "ib" },
-  { src: icc, alt: "icc" },
-  { src: iifl, alt: "iifl" },
-  { src: incredible, alt: "incredible india" },
-  { src: ipl, alt: "ipl" },
-  { src: jiocinema, alt: "jio cinema" },
-  { src: kurlon, alt: "kurlon" },
-  { src: maggie, alt: "maggie" },
-  { src: micromax, alt: "micromax" },
-  { src: ministryoftourism, alt: "ministry of tourism" },
-  { src: mp, alt: "mp" },
-  { src: mpl, alt: "mpl" },
-  { src: mtv, alt: "mtv" },
-  { src: ndtv, alt: "ndtv" },
-  { src: ola, alt: "ola" },
-  { src: rajasthan, alt: "rajasthan" },
-  { src: rs, alt: "rs" },
-  { src: sonymax, alt: "sony max" },
-  { src: srilanka, alt: "sri lanka" },
-  { src: starplus, alt: "star plus" },
-  { src: starsports, alt: "star sports" },
-  { src: starworld, alt: "star world" },
-  { src: uk, alt: "uk" },
-  { src: zeetv, alt: "zee tv" },
-  { src: absolut, alt: "absolut" },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/action.png",
+    alt: "action",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/absolut.png",
+    alt: "absolut",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/amar.png",
+    alt: "amar",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/bbc.png",
+    alt: "bbc",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/boardofcricket.png",
+    alt: "board of cricket",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/bp.png",
+    alt: "bp",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/colors.png",
+    alt: "colors",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/culture.png",
+    alt: "culture",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/dainik.png",
+    alt: "dainik",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/dainikjagran.png",
+    alt: "dainik jagran",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/foodpanda.png",
+    alt: "foodpanda",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/gujarat.png",
+    alt: "gujarat",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/hotstar.png",
+    alt: "hotstar",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/ib.png",
+    alt: "ib",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/incredible.png",
+    alt: "incredible india",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/ipl.png",
+    alt: "ipl",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/jiocinema.png",
+    alt: "jio cinema",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/maggie.png",
+    alt: "maggie",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/micromax.png",
+    alt: "micromax",
+  },
+  // { src: ministryoftourism, alt: "ministry of tourism" },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/mp.png",
+    alt: "mp",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/mpl.png",
+    alt: "mpl",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/mtv.png",
+    alt: "mtv",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/ola.png",
+    alt: "ola",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/rajasthan.png",
+    alt: "rajasthan",
+  },
+  // { src: rs, alt: "rs" },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/sonymax.png",
+    alt: "sony max",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/starplus.png",
+    alt: "star plus",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/starsports.png",
+    alt: "star sports",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/starworld.png",
+    alt: "star world",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/uk.png",
+    alt: "uk",
+  },
+  {
+    src: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/zeetv.png",
+    alt: "zee tv",
+  },
+  // // { src: srilanka, alt: "sri lanka" },
 ];
 
 const HeroSectionVideo = () => {
@@ -969,429 +1054,27 @@ const HeroSectionVideo = () => {
           OUR CLIENTS
         </div>
         {/* brand-icons */}
-
-        <div className="mt-[3rem] overflow-hidden">
-          <div className="flex animate-marquee whitespace-nowrap">
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={absolut} alt="absolut" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={action} alt="action" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={amar} alt="amar" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={bbc} alt="bbc" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={boardofcricket}
-                alt="board of cricket"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={bp} alt="bp" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={colors} alt="colors" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={culture} alt="culture" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={dainik} alt="dainik" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={dainikjagran}
-                alt="dainik jagran"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            {/* <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={foodpanda}
-                alt="foodpanda"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={glen} alt="glen" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={gujarat} alt="gujarat" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={hotstar} alt="hotstar" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={ib} alt="ib" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={icc} alt="icc" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={iifl} alt="iifl" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={incredible}
-                alt="incredible india"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={ipl} alt="ipl" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={jiocinema}
-                alt="jio cinema"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={kurlon} alt="kurlon" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={maggie} alt="maggie" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={micromax} alt="micromax" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={ministryoftourism}
-                alt="ministry of tourism"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={mp} alt="mp" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={mpl} alt="mpl" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={mtv} alt="mtv" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={ndtv} alt="ndtv" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={ola} alt="ola" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={rajasthan}
-                alt="rajasthan"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={rs} alt="rs" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={sonymax} alt="sony max" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={srilanka} alt="sri lanka" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={starplus} alt="star plus" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={starsports}
-                alt="star sports"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img
-                src={starworld}
-                alt="star world"
-                className="w-[6rem] h-auto"
-              />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={uk} alt="uk" className="w-[6rem] h-auto" />
-            </span>
-            <span
-              className="px-[1.5rem] py-[1rem] mx-[1rem]"
-              style={{
-                borderRadius: "1.4375rem",
-                background: "rgba(186, 191, 199, 0.50)",
-                backdropFilter: "blur(22px)",
-              }}
-            >
-              <img src={zeetv} alt="zee tv" className="w-[6rem] h-auto" />
-            </span> */}
+        <div className="mt-[3rem] w-full">
+          <div className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4 snap-x snap-mandatory">
+            {BRAND_ICONS.map((item, index) => (
+              <div
+                key={`brand-icon-${index}`}
+                className="flex-none snap-center w-[10rem] px-[2rem] py-[0.2rem] flex items-center justify-center"
+                style={{
+                  borderRadius: "1.4375rem",
+                  background: "rgba(186, 191, 199, 0.50)",
+                  backdropFilter: "blur(22px)",
+                }}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-[6rem] h-auto"
+                />
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* <div className="bg-[#303030] w-full h-[0.0625rem] mt-[3rem]" /> */}
       </section>
     </>
   );
