@@ -1,12 +1,18 @@
 
 const Footer = () => {
   return (
-    <footer className="w-full">
-      <div>
+    <footer className="w-full mb-14">
+      <div className="flex flex-col justify-center items-center" >
         <h1 className="text-[80px] text-white tracking-[3.2px] text-center">LET’S WORK TOGETHER</h1>
         <div>
           <img src="src/assests/mic.svg" alt="" />
         </div>
+           <button
+          className="mt-10 border border-[#EBEBEB] rounded-full px-5 py-3 md:text-[20px] text-base text-white flex items-center gap-x-3 w-fit"
+        >
+          Contact
+          <img src="src/assests/vector.svg" alt="" />
+        </button>
       </div>
       {/* <div
     className="bg-[#EE6F20] lg:rounded-[26px] rounded-[14px] lg:max-w-6xl lg:mx-auto mx-5 lg:pt-0 pt-[50px]"
