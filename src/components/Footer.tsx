@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-between items-center mt-10 border-t border-white pt-6 text-sm text-white">
           <span>INDIA 🇮🇳</span>
-          <span>© 2025 — Copyright   Privacy Policy   Terms & Conditions</span>
+          <span>© 2025 — Copyright | Privacy Policy | Terms & Conditions</span>
         </div>
       </div>
     </footer>
