@@ -7,7 +7,7 @@ import Portfolio from "@/components/Portfolio";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
+import StoriesSlider from "@/components/StoriesSlider";
 const Index = () => {
   return (
     <div className="min-h-screen bg-genesis-black text-genesis-white">
@@ -15,7 +15,8 @@ const Index = () => {
       <div className="mx-10">
         <Hero />
       </div>
-        <CountDown/>
+      <CountDown />
+      <StoriesSlider />
       {/* <About /> */}
       {/* <Services /> */}
       {/* <Portfolio /> */}

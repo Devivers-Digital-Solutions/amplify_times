@@ -2,7 +2,13 @@
 const Footer = () => {
   return (
     <footer className="w-full">
-      <div
+      <div>
+        <h1 className="text-[80px] text-white tracking-[3.2px] text-center">LET’S WORK TOGETHER</h1>
+        <div>
+          <img src="src/assests/mic.svg" alt="" />
+        </div>
+      </div>
+      {/* <div
     className="bg-[#EE6F20] lg:rounded-[26px] rounded-[14px] lg:max-w-6xl lg:mx-auto mx-5 lg:pt-0 pt-[50px]"
   >
     <div
@@ -31,7 +37,7 @@ const Footer = () => {
         </button>
       </div>  
     </div>
-  </div>
+  </div> */}
     </footer>
   );
 };
