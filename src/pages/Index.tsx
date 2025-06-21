@@ -7,21 +7,23 @@ import Portfolio from "@/components/Portfolio";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Showreel from "@/components/Showreel";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-genesis-black text-genesis-white">
       <Navigation />
-      {/* <div className="mx-10">
+      <div className="mx-10">
         <Hero />
-      </div> */}
-      {/* <CountDown /> */}
+      </div>
+      <CountDown />
       <About />
+      <Showreel />
       {/* <Services /> */}
       {/* <Portfolio /> */}
       {/* <Blog /> */}
       {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

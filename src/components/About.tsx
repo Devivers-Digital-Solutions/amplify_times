@@ -525,41 +525,6 @@ const About = () => {
           ))}
         </div>
       </div>
-
-      {/* Call to Action */}
-      <div className="w-[95vw] mx-auto mt-[5rem] flex flex-col items-center mb-[5rem]">
-        <div
-          className="text-[5rem]"
-          style={{
-            color: "#FFF",
-            fontFamily: "Red Hat Display",
-            fontStyle: "normal",
-            fontWeight: 400,
-            lineHeight: "normal",
-            letterSpacing: "0.2rem",
-          }}
-        >
-          LET'S WORK TOGETHER
-        </div>
-        <CiMicrophoneOn className="text-[4rem] my-[1.5rem]" />
-        <button
-          className="px-[2rem] py-[1rem] flex justify-center items-center"
-          style={{
-            color: "#FFF",
-            fontFamily: "Helvetica",
-            fontSize: "1.25rem",
-            fontStyle: "normal", 
-            fontWeight: 400,
-            lineHeight: "normal",
-            borderRadius: "3.3125rem",
-            border: "2px solid #EBEBEB",
-            boxShadow: "0px 2px 4px 0px rgba(255, 255, 255, 0.25)"
-          }}
-        >
-          Contact Us
-          <MdArrowOutward className="text-[1.5rem] ml-[0.8rem]" />
-        </button>
-      </div>
     </section>
   );
 };
