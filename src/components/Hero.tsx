@@ -1,55 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import img1 from "../assests/img1.png";
-import img2 from "../assests/img2.png";
-import img3 from "../assests/img3.png";
-import img4 from "../assests/img4.png";
-import img5 from "../assests/img5.png";
-import worldCup from "../assests/worldcup.jpg";
-import sriLanka from "../assests/srilanka.png";
-import ipl2023 from "../assests/ipl.png";
-import wpl2023 from "../assests/wpl23.png";
-import wpl2025 from "../assests/wpl25.png";
-import upt20 from "../assests/upt20.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Countdown from "./CountDown";
-import absolut from "../assests/absolut.png";
-import action from "../assests/action.png";
-import amar from "../assests/amar.png";
-import bbc from "../assests/bbc.png";
-import boardofcricket from "../assests/boardofcricket.png";
-import bp from "../assests/bp.png";
-import colors from "../assests/colors.png";
-import culture from "../assests/culture.png";
-import dainik from "../assests/dainik.png";
-import dainikjagran from "../assests/denikjagran.png";
-import foodpanda from "../assests/foodpanda.png";
-import glen from "../assests/glen.png";
-import gujarat from "../assests/gujarat.png";
-import hotstar from "../assests/hotstar.png";
-import ib from "../assests/ib.png";
-import icc from "../assests/icc.png";
-import iifl from "../assests/iifl.png";
-import incredible from "../assests/incredible.png";
-import ipl from "../assests/ipl.png";
-import jiocinema from "../assests/jiocinema.png";
-import kurlon from "../assests/kurlon.png";
-import maggie from "../assests/maggie.png";
-import micromax from "../assests/micromax.png";
-import ministryoftourism from "../assests/ministryoftourism.png";
-import mp from "../assests/mp.png";
-import mpl from "../assests/mpl.png";
-import mtv from "../assests/mtv.png";
-import ndtv from "../assests/ndtv.png";
-import ola from "../assests/ola.png";
-import rajasthan from "../assests/rajasthan.png";
-import rs from "../assests/rs.png";
-import sonymax from "../assests/sonymax.png";
-import srilanka from "../assests/srilanka.png";
-import starplus from "../assests/starplus.png";
-import starsports from "../assests/starsports.png";
-import starworld from "../assests/starworld.png";
-import uk from "../assests/uk.png";
-import zeetv from "../assests/zeetv.png";
 
 const HERO_TEXTS = [
   "Storytellers",
@@ -107,32 +58,32 @@ const VIDEO_URLS = [
 const sportsEvents = [
   {
     title: "World cup 2023",
-    image: worldCup,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/worldcup.jpg",
     size: "w-full sm:w-[60%] h-[290px] text-[64px]",
   },
   {
     title: "Sri Lanka Legends Premier League 2024",
-    image: sriLanka,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/srilanka.png",
     size: "w-full sm:w-[38%] h-[290px] text-[42px]",
   },
   {
     title: "IPL 2023",
-    image: ipl2023,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/ipl.png",
     size: "w-full sm:w-[38%] h-[290px] text-[42px]",
   },
   {
     title: "WPL 2023",
-    image: wpl2023,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/wpl23.png",
     size: "w-full sm:w-[60%] h-[290px] text-[42px]",
   },
   {
     title: "WPL 2025",
-    image: wpl2025,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/wpl25.png",
     size: "w-full sm:w-[60%] h-[290px] text-[42px]",
   },
   {
     title: "UPT 20",
-    image: upt20,
+    image: "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/upt20.png",
     size: "w-full sm:w-[38%] h-[290px] text-[42px]",
   },
 ];
@@ -517,12 +468,12 @@ const HeroSectionVideo = () => {
         </div>
         {/* image-section */}
         <div className="px-[2rem] mt-[2rem]">
-          <div className="flex flex-wrap gap-4 justify-start">
-            {sportsEvents.map((item, index) => (
+          <div className="grid grid-cols-5 justify-items-center gap-x-[3rem]">
+            {/* {sportsEvents.map((item, index) => (
               <div
                 key={`sport-event-${item.title}-${index}`}
                 className={`relative overflow-hidden rounded-xl ${item.size} group cursor-pointer`}
-              >
+              > 
                 <img
                   src={item.image}
                   alt={item.title}
@@ -545,8 +496,23 @@ const HeroSectionVideo = () => {
                   {item.title}
                 </p>
               </div>
-            ))}
-          </div>
+            ))} */}
+            <div>
+              <img src = "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/img1.png" alt = "img1" />
+            </div>
+            <div>
+              <img src = "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/img2.png" alt = "img2" />
+            </div>
+            <div>
+              <img src = "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/img3.png" alt = "img3" />
+            </div>
+            <div>
+              <img src = "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/img4.png" alt = "img4" />
+            </div>
+            <div>
+              <img src = "https://taahadevivers.s3.ap-south-1.amazonaws.com/amplifytimeswebsite/images/img5.png" alt = "img5" />
+            </div>
+         </div>
         </div>
       </section>
 
