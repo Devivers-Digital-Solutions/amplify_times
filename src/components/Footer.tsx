@@ -1,9 +1,5 @@
 
 const Footer = () => {
-   const handleClick = () => {
-     window.location.href =
-      "mailto:harshita@devivers.com?subject=Let%27s%20Work%20Together&body=Hi%20Team%20Ampliify%2C"
-  };
   return (
     <footer className="w-full mb-14">
       <div className="flex flex-col justify-center items-center" >
@@ -11,7 +7,7 @@ const Footer = () => {
         <div>
           <img src="src/assests/mic.svg" alt="" />
         </div>
-           <button  onClick={handleClick}
+           <button  
           className="mt-10 border border-[#EBEBEB] rounded-full px-5 py-3 md:text-[20px] text-base text-white flex items-center gap-x-3 w-fit"
         >
           content@ampliifytimes.com
