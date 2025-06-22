@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="w-full mb-14">
       <div className="flex flex-col justify-center items-center" >
-        <h1 className="lg:text-[80px] text-[40px] text-white tracking-[3.2px] text-center">LET’S WORK TOGETHER</h1>
+        <h1 className="lg:text-[50px] text-[32px] text-white tracking-[3.2px] text-center">LET’S WORK TOGETHER</h1>
         <div>
           <img src="/images/mic.svg" alt="" />
         </div>

@@ -39,13 +39,13 @@ export default function Stories() {
     <>
       <div className="relative w-full flex flex-col items-center px-6 py-10">
         <div className="lg:mb-16 mb-10">
-          <h1 className="text-[#BFBFBF] lg:text-[50px] text-[32px] text-center font-medium lg:mb-5 mb-1.5">
+          <h1 className="text-[#BFBFBF] lg:text-[40px] text-[32px] text-center font-medium lg:mb-5 mb-1.5">
             STORIES WE ARE SCRIPTING
           </h1>
           <img
             src="/images/video-camera.svg"
             alt=""
-            className="mx-auto lg:w-[73px] w-11 "
+            className="mx-auto lg:w-[65px] w-11 "
           />
         </div>
 
