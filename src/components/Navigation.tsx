@@ -3,19 +3,20 @@ import { useState, useEffect } from "react";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveSection(window.location.hash);
+    };
+    handleHashChange();
 
- useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-  };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const navItems = [
     { name: "HOME", href: "#home" },
-    { name: "OUR STORY", href: "#about" },
+    { name: "OUR STORY", href: "#story" },
     { name: "OUR SERVICES", href: "#services" },
     { name: "SHOWREEL", href: "#work" },
     { name: "ABOUT US", href: "#about" },
@@ -80,13 +81,17 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#2E2D2D] h-screen px-6 py-4 flex flex-col space-y-4 items-center">
+        <div className="md:hidden bg-[#2E2D2D] h-screen px-6 py-4 flex flex-col space-y-[58px] items-center">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[#8D8D8D] text-2xl "
+              className={`text-2xl ${
+                activeSection === item.href
+                  ? "text-white text-5xl"
+                  : "text-[#8D8D8D]"
+              }`}
             >
               {item.name}
             </a>
