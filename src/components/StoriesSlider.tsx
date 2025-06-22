@@ -15,57 +15,47 @@ const visibleCount = 6;
 const transitionDuration = 500;
 
 export default function Stories() {
+  const [index, setIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(visibleCount);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
 
-  const prefix = images.slice(-visibleCount);
-  const postfix = images.slice(0, visibleCount);
-  const clonedImages = [...prefix, ...images, ...postfix];
-
-  const goNext = () => setCurrentIndex((prev) => prev + 1);
-  const goPrev = () => setCurrentIndex((prev) => prev - 1);
-
-  const handleTransitionEnd = () => {
-    if (currentIndex === clonedImages.length - visibleCount) {
-      setTransitionEnabled(false);
-      setCurrentIndex(visibleCount);
-    } else if (currentIndex === 0) {
-      setTransitionEnabled(false);
-      setCurrentIndex(images.length);
+  const getVisibleSlides = () => {
+    const result = [];
+    for (let i = 0; i < visibleCount; i++) {
+      const img = images[(index + i) % images.length];
+      result.push(img);
     }
+    return result;
   };
 
-  useEffect(() => {
-    if (!transitionEnabled && sliderRef.current) {
-      sliderRef.current.style.transition = "none";
-      void sliderRef.current.offsetWidth;
-      sliderRef.current.style.transition = `transform ${transitionDuration}ms ease-in-out`;
-      setTransitionEnabled(true);
-    }
-  }, [transitionEnabled]);
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % images.length);
+  };
 
-  const transformStyle = {
-    transform: `translateX(-${(currentIndex * 100) / visibleCount}%)`,
-    transition: transitionEnabled ? `transform ${transitionDuration}ms ease-in-out` : "none",
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
     <>
-      <div className="relative w-full flex flex-col items-center px-6 py-10">
+      <div className="relative w-full flex flex-col items-center px-6 py-10 bg-black">
         <div className="mb-16">
-            <h1 className="text-[#BFBFBF] text-[50px] text-center font-medium mb-5">STORIES WE ARE SCRIPTING</h1>
-            <img src="src/assests/video-camera.svg" alt="" className="mx-auto" />
+          <h1 className="text-[#BFBFBF] text-[50px] text-center font-medium mb-5">
+            STORIES WE ARE SCRIPTING
+          </h1>
+          <img
+            src="src/assests/video-camera.svg"
+            alt=""
+            className="mx-auto"
+          />
         </div>
+
         <div className="w-full overflow-hidden">
           <div
             ref={sliderRef}
-            className="flex"
-            style={transformStyle}
-            onTransitionEnd={handleTransitionEnd}
+            className="flex transition-transform duration-500 ease-in-out"
           >
-            {clonedImages.map((img, index) => (
-              <div key={index} className="flex-shrink-0 md:px-3 px-2 slide">
+            {getVisibleSlides().map((img, i) => (
+              <div key={i} className="slide flex-shrink-0 px-2 md:px-3">
                 <img
                   src={img.src}
                   alt={img.alt}
@@ -77,14 +67,14 @@ export default function Stories() {
         </div>
 
         <div className="mt-10 flex items-center gap-6 justify-end w-full">
-          <button onClick={goPrev} className="cursor-pointer">
+          <button onClick={prevSlide} className="cursor-pointer">
             <img
               src="src/assests/left-arrow.svg"
               alt="Left"
               className="lg:w-[42px] lg:h-[42px] w-7 h-7"
             />
           </button>
-          <button onClick={goNext} className="cursor-pointer">
+          <button onClick={nextSlide} className="cursor-pointer">
             <img
               src="src/assests/right-arrow.svg"
               alt="Right"
@@ -94,7 +84,6 @@ export default function Stories() {
         </div>
       </div>
 
-      {/* Separated Style Section */}
       <style>{`
         .slide {
           width: 16.66%;
@@ -111,21 +100,21 @@ export default function Stories() {
         @media (max-width: 1024px) {
           .slide {
             width: 25%;
-            height: 243px;
+            height: 300px;
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .slide {
             width: 50%;
-            height: 350px;
+            height: 300px;
           }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
           .slide {
-            width: 50%;
-            height: 243px;
+            width: 100%;
+            height: 250px;
           }
         }
       `}</style>
