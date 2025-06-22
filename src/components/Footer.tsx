@@ -7,12 +7,13 @@ const Footer = () => {
         <div>
           <img src="src/assests/mic.svg" alt="" />
         </div>
-           <button  
-          className="mt-10 border border-[#EBEBEB] rounded-full px-5 py-3 md:text-[20px] text-base text-white flex items-center gap-x-3 w-fit"
+          <a
+          href="mailto:content@ampliifytimes.com?subject=Let%27s%20Work%20Together&body="
+          className="mt-6 border border-white rounded-full px-6 py-3 md:text-[20px] text-base text-white flex items-center gap-x-2 transition hover:bg-white hover:text-black"
         >
           content@ampliifytimes.com
-          <img src="src/assests/vector.svg" alt="" />
-        </button>
+          <img src="src/assests/vector.svg" alt="arrow" />
+        </a>
       </div>
     </footer>
   );

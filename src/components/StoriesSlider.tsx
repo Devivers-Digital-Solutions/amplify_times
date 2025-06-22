@@ -37,7 +37,7 @@ export default function Stories() {
 
   return (
     <>
-      <div className="relative w-full flex flex-col items-center px-6 py-10 bg-black">
+      <div className="relative w-full flex flex-col items-center px-6 py-10">
         <div className="mb-16">
           <h1 className="text-[#BFBFBF] text-[50px] text-center font-medium mb-5">
             STORIES WE ARE SCRIPTING

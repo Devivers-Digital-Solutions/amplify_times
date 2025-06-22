@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import StoriesSlider from "@/components/StoriesSlider";
 const Index = () => {
   return (
-    <div className="min-h-screen bg-genesis-black text-genesis-white">
+    <div className="min-h-screen bg-[#0D0D0D] text-genesis-white">
       <Navigation />
       <div className="mx-10">
         <Hero />
