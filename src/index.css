@@ -54,7 +54,7 @@
   }
 
   body {
-    @apply bg-genesis-black text-genesis-white font-inter antialiased;
+    @apply bg-genesis-black text-genesis-white font-sans antialiased;
   }
 
   html {

@@ -72,8 +72,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif'],
-				'mono': ['SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'monospace']
+				'sans': ['"Red Hat Display"', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
