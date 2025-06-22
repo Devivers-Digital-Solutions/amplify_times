@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 
 const images = [
-  { src: "src/assests/tiraha.png", alt: "Tiraha" },
-  { src: "src/assests/silkyara.png", alt: "Silkyara" },
-  { src: "src/assests/raavi.png", alt: "Raavi" },
-  { src: "src/assests/roar.png", alt: "Roar" },
-  { src: "src/assests/patange.png", alt: "Patange" },
-  { src: "src/assests/one-day.png", alt: "One Day" },
-  { src: "src/assests/final-click.png", alt: "Final Click" },
-  { src: "src/assests/last-party.png", alt: "Last Party" },
+  { src: "/images/tiraha.png", alt: "Tiraha" },
+  { src: "/images/silkyara.png", alt: "Silkyara" },
+  { src: "/images/raavi.png", alt: "Raavi" },
+  { src: "/images/roar.png", alt: "Roar" },
+  { src: "/images/patange.png", alt: "Patange" },
+  { src: "/images/one-day.png", alt: "One Day" },
+  { src: "/images/final-click.png", alt: "Final Click" },
+  { src: "/images/last-party.png", alt: "Last Party" },
 ];
 
 const visibleCount = 6;
@@ -69,14 +69,14 @@ export default function Stories() {
         <div className="mt-10 flex items-center gap-6 justify-end w-full">
           <button onClick={prevSlide} className="cursor-pointer">
             <img
-              src="src/assests/left-arrow.svg"
+              src="/images/left-arrow.svg"
               alt="Left"
               className="lg:w-[42px] lg:h-[42px] w-7 h-7"
             />
           </button>
           <button onClick={nextSlide} className="cursor-pointer">
             <img
-              src="src/assests/right-arrow.svg"
+              src="/images/right-arrow.svg"
               alt="Right"
               className="lg:w-[42px] lg:h-[42px] w-7 h-7"
             />

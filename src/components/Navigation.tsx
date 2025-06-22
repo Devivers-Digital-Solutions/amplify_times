@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logo from "../assests/amplify-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +27,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className=" w-[128px]" />
+            <img src="/images/amplify-logo.png" alt="Logo" className=" w-[128px]" />
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
