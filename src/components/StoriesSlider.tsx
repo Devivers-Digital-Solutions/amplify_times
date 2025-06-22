@@ -110,6 +110,12 @@ export default function Stories() {
             height: 300px;
           }
         }
+           @media (max-width: 640px) {
+          .slide {
+            width: 50%;
+            height: 245px;
+          }
+        }
       `}</style>
     </>
   );
