@@ -32,7 +32,7 @@ const Countdown = () => {
   );
 
   return (
-    <div className="pt-[113px] flex flex-col justify-center items-center pb-10">
+    <div className="pt-[138px] flex flex-col justify-center items-center pb-10">
       <p className="text-[#A6A6A6] md:text-[40px] text-[32px] text-center font-medium mb-3 leading-normal">
       COMING SOON
       </p>
