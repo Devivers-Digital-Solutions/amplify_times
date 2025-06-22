@@ -34,7 +34,7 @@ const Countdown = () => {
   return (
     <div className="pt-[113px] flex flex-col justify-center items-center pb-10">
       <p className="text-[#A6A6A6] md:text-[40px] text-[32px] text-center font-normal mb-3 leading-normal">
-        Coming Soon
+      COMING SOON
       </p>
       <div className="flex space-x-6 rounded-md">
         {timeUnits.map((item, index) => (

@@ -38,14 +38,14 @@ export default function Stories() {
   return (
     <>
       <div className="relative w-full flex flex-col items-center px-6 py-10">
-        <div className="mb-16">
-          <h1 className="text-[#BFBFBF] text-[50px] text-center font-medium mb-5">
+        <div className="lg:mb-16 mb-10">
+          <h1 className="text-[#BFBFBF] lg:text-[50px] text-[32px] text-center font-medium lg:mb-5 mb-1.5">
             STORIES WE ARE SCRIPTING
           </h1>
           <img
-            src="src/assests/video-camera.svg"
+            src="/images/video-camera.svg"
             alt=""
-            className="mx-auto"
+            className="mx-auto lg:w-[73px] w-11 "
           />
         </div>
 
@@ -108,13 +108,6 @@ export default function Stories() {
           .slide {
             width: 50%;
             height: 300px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .slide {
-            width: 100%;
-            height: 250px;
           }
         }
       `}</style>
