@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,21 +65,25 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .animate-reveal {
     animation: fade-in 0.8s ease-out forwards;
   }
-  
+
   .hover-scale {
     transition: transform 0.3s ease-out;
   }
-  
+
   .hover-scale:hover {
     transform: scale(1.05);
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee2 {
+    animation: marquee2 25s linear infinite;
   }
 }
 
@@ -90,5 +93,14 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
