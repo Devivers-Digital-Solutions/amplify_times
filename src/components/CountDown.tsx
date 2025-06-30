@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 
 const Countdown = () => {
-  const targetDate = new Date("2025-06-30T23:59:00");
+  const targetDate = new Date("2025-07-03T23:59:00");
 
   const getTimeLeft = () => {
     const total = targetDate - new Date();
